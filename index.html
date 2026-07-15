@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pierre — YoungCEO</title>
-<meta name="description" content="Pierre Emmanuel Gerard — Founder & CTO of Afryx. Building Kampus, Arcflow and Miyora AI. London, UK.">
+<title>Pierre Emmanuel Gerard — YoungCEO</title>
+<meta name="description" content="Pierre — Founder & CTO of Afryx. Building Kampus, Arcflow and Miyora AI. London, UK.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 <style>
@@ -27,6 +27,30 @@ body{
   position:relative;
 }
 ::selection{background:var(--accent);color:#000}
+
+body.light{
+  --bg:#f5f1e8;
+  --ink:#1d1b17;
+  --dim:#6f6a5e;
+  --faint:#d8d2c2;
+  --accent:#9a6b00;
+  --accent-dim:#c9a227;
+}
+body.light::before{opacity:.12}
+body.light::after{background:radial-gradient(ellipse at 50% 42%,transparent 60%,rgba(0,0,0,.10) 100%)}
+body.light pre#globe{text-shadow:0 0 10px rgba(154,107,0,.18);filter:none}
+body.light .pal-item:hover,body.light .pal-item.sel{background:#eae4d4}
+body.light #palette{background:rgba(245,241,232,.9)}
+body.light kbd{color:var(--ink)}
+
+#theme-btn{
+  margin-left:auto;background:none;border:1px solid var(--faint);
+  color:var(--dim);font:inherit;font-size:14px;line-height:1;
+  width:30px;height:30px;cursor:pointer;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  transition:transform .3s,color .2s,border-color .2s;
+}
+#theme-btn:hover{color:var(--accent);border-color:var(--accent-dim);transform:rotate(180deg)}
 
 /* CRT atmosphere */
 body::before{
@@ -59,7 +83,7 @@ nav a:hover,nav a:focus-visible{color:var(--accent);border-bottom-color:var(--ac
 
 #menu{
   position:absolute;top:calc(100% - 6px);left:66px;
-  background:rgba(7,7,7,.97);border:1px solid var(--faint);
+  background:var(--bg);border:1px solid var(--faint);
   padding:16px 20px;min-width:250px;display:none;
   box-shadow:0 18px 50px rgba(0,0,0,.7);
 }
@@ -218,12 +242,14 @@ kbd{
   <span class="sep">&gt;</span>
   <button class="crumb-btn" id="am-btn" aria-expanded="false">am</button>
   <span class="sep">&gt;</span>
-  <span id="name-crumb">Pierre — YoungCEO</span>
+  <span id="name-crumb">Pierre Emmanuel Gerard</span>
+  <button id="theme-btn" aria-label="toggle light/dark mode" title="toggle theme">◐</button>
 
   <div id="menu" role="menu">
     <div class="group">am</div>
     <button data-go="home" aria-current="true"><span>Pierre</span><span class="idx">default</span></button>
     <button data-go="about"><span>About</span><span class="idx">profile</span></button>
+    <button data-go="story"><span>My Story</span><span class="idx">journey</span></button>
     <div class="group">company</div>
     <button data-go="afryx"><span>Afryx</span><span class="idx">↳</span></button>
     <div class="group">building</div>
@@ -287,6 +313,53 @@ kbd{
     <div class="proj-nav">
       <button data-go="home">&lt; home</button>
       <button data-go="afryx">afryx &gt;</button>
+    </div>
+  </section>
+
+  <!-- MY STORY -->
+  <section class="screen proj" id="story">
+    <div class="idx">MY STORY</div>
+    <pre class="mini" data-anim="story" aria-hidden="true"></pre>
+    <h1>My Story</h1>
+    <div class="meta">"Your beginnings do not define your destiny. Your decisions do."</div>
+
+    <div class="term-label">beginnings</div>
+    <p>I was born in Cameroon — a country rich in culture, resilience, and hope. It is where my story began, and where I first learned that life doesn't always give you the same opportunities as everyone else. But it does give you the choice to fight for them.</p>
+    <p>Growing up, I wasn't surrounded by wealth or privilege. What I was surrounded by was sacrifice. The greatest example of that sacrifice has always been my mother. She carried burdens many people will never see. She believed in me before I believed in myself. When my dreams sounded too ambitious, she never asked me to make them smaller — she reminded me to work harder. Every opportunity I've had was built on sacrifices she made quietly, asking for nothing in return except that I become the man she always knew I could be. If there is one person who deserves to celebrate every success I achieve, it is her.</p>
+
+    <div class="term-label">leaving home</div>
+    <p>Leaving Cameroon was one of the hardest decisions of my life. I wasn't simply boarding a plane — I was leaving behind family, familiarity, my culture, and everything I had ever known, in pursuit of a future that only existed inside my imagination. Most people only see the destination. Very few understand what it costs to leave home.</p>
+    <p>Starting over in another country means learning to be comfortable with loneliness. It means adapting to new cultures, new systems, and new expectations — while still carrying the hopes of everyone back home. The United Kingdom became my new chapter.</p>
+
+    <div class="term-label">rejection</div>
+    <p>It wasn't easy. Things didn't go according to plan. Applications were rejected. Opportunities slipped away. Doors I expected to open stayed firmly closed. Every rejection asked me the same question: <em>how badly do you want this?</em> Each time, I chose to continue. Because rejection isn't the opposite of success — sometimes it is the path to it.</p>
+
+    <div class="term-label">failures</div>
+    <p>I chose to study Artificial Intelligence because I believe the future belongs to those who build it. I didn't want to spend my life watching innovation happen — I wanted to become part of it. But university taught me more than technology. It taught me patience, humility, perseverance — and that intelligence means very little without consistency.</p>
+    <p>Outside my studies, my mind was never still: business ideas, startups, content, brand building, learning, reading, planning, failing, starting again. I've launched ideas that never became companies. I've imagined futures that never happened. I've spent nights convinced I'd found the breakthrough, only to wake up realising I had to begin again. Every failure gave me something success couldn't — experience.</p>
+
+    <div class="term-label">discipline — good and bad</div>
+    <p>There have been moments when my discipline disappeared. Moments where procrastination won. Moments where fear disguised itself as perfectionism. Days where I questioned whether I was moving quickly enough, whether I was capable enough, whether my dreams were simply too big.</p>
+    <p>But discipline isn't about never falling. It's about refusing to stay on the ground. Every morning became another opportunity to begin again.</p>
+
+    <div class="term-label">the people who carried me</div>
+    <p>Through all of this, two people have consistently reminded me that I never walk alone. My mother, whose love has been the foundation beneath every step I've taken. And my girlfriend, whose belief in me has never depended on my achievements — she has celebrated the victories, encouraged me through disappointments, and supported dreams still invisible to the rest of the world. Having someone who believes in your potential during the quiet seasons is one of life's greatest gifts.</p>
+
+    <div class="term-label">faith</div>
+    <p>My faith has shaped me. There have been moments where I had nothing except prayer. Moments where I couldn't see the next step but trusted God enough to take it anyway. Faith didn't remove the obstacles — it gave me the strength to face them.</p>
+
+    <div class="term-label">mission</div>
+    <p>Today, many people would describe me as ambitious. They're right. But ambition alone isn't my identity. Curiosity is. Resilience is. Hope is. I don't dream of building companies because I want people to know my name — I dream of building companies because I want to solve problems that matter. I don't create because I want attention. I create because one idea can change a life, just as ideas have changed mine.</p>
+    <p>My mission has never been simply to become wealthy. Money is a tool. My real goal is freedom — the freedom to create, to innovate, to help others, and to prove that a young man who left Cameroon with nothing more than belief, faith, and relentless determination can build something that changes lives across the world.</p>
+
+    <div class="term-label">why</div>
+    <p>This story is far from finished. There will be more setbacks, more criticism, more failures, more lessons. But there will also be victories that today's version of me cannot yet imagine.</p>
+    <p>One day, people may see successful companies, speeches, books, technologies, investments. What they won't always see is the young student who left home carrying the hopes of his family. The son who refused to waste his mother's sacrifices. The man strengthened by the love of a woman who believed in him before the world did. The believer who trusted God when the path made no sense. The entrepreneur who kept building after every rejection. And the dreamer from Cameroon who decided that where he started would never determine where he finished.</p>
+    <p><em>This is my story — not because I have already achieved everything I dream of, but because I chose never to stop becoming the man capable of achieving it.</em></p>
+
+    <div class="proj-nav">
+      <button data-go="home">&lt; home</button>
+      <button data-go="about">about &gt;</button>
     </div>
   </section>
 
@@ -523,6 +596,16 @@ function type(){
 }
 type();
 
+/* ============ theme switcher ============ */
+const themeBtn=document.getElementById('theme-btn');
+function setTheme(light){
+  document.body.classList.toggle('light',light);
+  themeBtn.textContent = light ? '◑' : '◐';
+  try{ localStorage.setItem('theme', light?'light':'dark'); }catch(e){}
+}
+try{ setTheme(localStorage.getItem('theme')==='light'); }catch(e){}
+themeBtn.addEventListener('click',()=>setTheme(!document.body.classList.contains('light')));
+
 /* ============ London clock ============ */
 function tick(){
   const t = new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'}).format(new Date());
@@ -539,7 +622,7 @@ function go(id){
   menuBtns.forEach(b=>b.setAttribute('aria-current', b.dataset.go===id));
   menu.classList.remove('open'); amBtn.setAttribute('aria-expanded','false');
   document.getElementById('name-crumb').textContent =
-    id==='home' ? 'Pierre — YoungCEO' : document.querySelector('#'+id+' h1').textContent;
+    id==='home' ? 'Pierre Emmanuel Gerard' : document.querySelector('#'+id+' h1').textContent;
 }
 document.addEventListener('click',e=>{
   const t=e.target.closest('[data-go]');
@@ -563,6 +646,7 @@ const palette=document.getElementById('palette'),
 const cmds=[
   {label:'go: home',k:'default',id:'home'},
   {label:'go: About',k:'profile · skills · experience',id:'about'},
+  {label:'go: My Story',k:'journey · why',id:'story'},
   {label:'go: Afryx',k:'the company',id:'afryx'},
   {label:'go: Kampus',k:'01 · platform',id:'kampus'},
   {label:'go: Arcflow',k:'02 · saas',id:'arcflow'},
@@ -710,6 +794,31 @@ ANIM.about = (t)=>{
     const bar='█'.repeat(Math.max(0,fill-shimmer))+(shimmer?'▓':'')+'░'.repeat(total-fill);
     return name+' '+bar+'  '+Math.round(lvl*100)+'%';
   }).join('\n');
+};
+
+/* STORY — sun rising over the horizon */
+ANIM.story = (t)=>{
+  const W=42,H=8,HOR=6;
+  const cycle=(t*0.9)%12;
+  const rise=Math.min(1,cycle/6);              // 0→1 rising
+  const cy=HOR - rise*4.2;                      // sun centre row
+  const cx=W/2;
+  const g=Array.from({length:H},()=>new Array(W).fill(' '));
+  // horizon
+  for(let i=0;i<W;i++) g[HOR][i]='─';
+  // sun (radius 1.8) clipped above horizon
+  for(let j=0;j<HOR;j++)for(let i=0;i<W;i++){
+    const dx=(i-cx)/2, dy=j-cy;
+    if(dx*dx+dy*dy<=1.8) g[j][i]= rise<1?'▒':'█';
+  }
+  // rays once risen
+  if(rise>=1 && Math.floor(t*2)%2===0){
+    const ry=Math.round(cy);
+    [[cx-6,ry],[cx+6,ry],[cx-4,ry-2],[cx+4,ry-2],[Math.round(cx),ry-3]].forEach(([x,y])=>{
+      if(y>=0&&y<HOR&&g[y]&&g[y][x]===' ') g[y][Math.round(x)]='·';
+    });
+  }
+  return g.map(r=>r.join('')).join('\n')+'\n     where you start ≠ where you finish';
 };
 
 /* APEX — scrolling heartbeat / performance trace */
