@@ -135,6 +135,26 @@ h1{font-size:clamp(21px,3.4vw,31px);font-weight:600;letter-spacing:-.02em}
   background:none;border:none;font-family:var(--font);cursor:pointer;width:100%;
 }
 .see-more:hover{color:var(--accent)}
+
+/* newsletter */
+.nl{margin-top:30px;text-align:center}
+.nl-label{font-size:11px;color:var(--faint);letter-spacing:.15em;margin-bottom:10px}
+.nl-label::before{content:"$ ";color:var(--accent-dim)}
+.nl-row{display:inline-flex;max-width:100%;border:1px solid var(--faint)}
+.nl-row:focus-within{border-color:var(--accent-dim)}
+.nl input{
+  background:none;border:none;outline:none;color:var(--ink);
+  font:inherit;font-size:13px;padding:10px 14px;width:220px;max-width:55vw;
+}
+.nl input::placeholder{color:var(--faint)}
+.nl button{
+  background:none;border:none;border-left:1px solid var(--faint);
+  color:var(--accent);font:inherit;font-size:13px;padding:10px 16px;cursor:pointer;
+  transition:background .15s,color .15s;
+}
+.nl button:hover{background:var(--accent);color:var(--bg)}
+.nl-msg{font-size:12px;color:var(--dim);margin-top:9px;min-height:1.2em}
+.nl-msg.ok{color:var(--accent)}
 @keyframes pulse{50%{opacity:.35}}
 
 /* project screens */
@@ -271,6 +291,15 @@ kbd{
     <p class="tag"><span id="typed"></span><span class="cursor">█</span></p>
     <div class="now">heads down — two products in flight, launching 2026</div>
     <button class="see-more" data-go="afryx">about afryx →</button>
+
+    <div class="nl">
+      <div class="nl-label">newsletter — one email when something ships</div>
+      <div class="nl-row">
+        <input id="nl-email" type="email" placeholder="you@domain.com" autocomplete="email" inputmode="email">
+        <button id="nl-btn" type="button">subscribe</button>
+      </div>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
   </section>
 
   <!-- ABOUT -->
@@ -595,6 +624,37 @@ function type(){
   }
 }
 type();
+
+/* ============ newsletter ============ */
+/* Setup: create a free form at formspree.io, then replace YOUR_FORM_ID below
+   with the ID from your form's endpoint (looks like: https://formspree.io/f/abcdwxyz) */
+const NEWSLETTER_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+const nlEmail=document.getElementById('nl-email'),
+      nlBtn=document.getElementById('nl-btn'),
+      nlMsg=document.getElementById('nl-msg');
+async function subscribe(){
+  const email=(nlEmail.value||'').trim();
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
+    nlMsg.textContent='> enter a valid email'; nlMsg.classList.remove('ok'); return;
+  }
+  if(NEWSLETTER_ENDPOINT.includes('YOUR_FORM_ID')){
+    nlMsg.textContent='> signups opening soon'; nlMsg.classList.remove('ok'); return;
+  }
+  nlBtn.disabled=true; nlMsg.textContent='> sending…'; nlMsg.classList.remove('ok');
+  try{
+    const r=await fetch(NEWSLETTER_ENDPOINT,{
+      method:'POST',
+      headers:{'Accept':'application/json','Content-Type':'application/json'},
+      body:JSON.stringify({email})
+    });
+    if(r.ok){ nlMsg.textContent='> subscribed ✓ — talk soon'; nlMsg.classList.add('ok'); nlEmail.value=''; }
+    else{ nlMsg.textContent='> something went wrong — try again'; }
+  }catch(e){ nlMsg.textContent='> network error — try again'; }
+  nlBtn.disabled=false;
+}
+nlBtn.addEventListener('click',subscribe);
+nlEmail.addEventListener('keydown',e=>{ if(e.key==='Enter') subscribe(); e.stopPropagation(); });
 
 /* ============ theme switcher ============ */
 const themeBtn=document.getElementById('theme-btn');
