@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+@page { size: A4; margin: 14mm 15mm 13mm 15mm; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Helvetica, Arial, sans-serif; font-size: 9.4pt; line-height: 1.38; color: #1d1b17; }
+a { color: #1d1b17; text-decoration: none; }
+
+h1 { font-size: 19pt; font-weight: 700; letter-spacing: .3px; }
+.tagline { font-size: 10pt; color: #3d3a33; margin-top: 2px; }
+.contact { font-size: 8.6pt; color: #55524a; margin-top: 4px; }
+.contact span { white-space: nowrap; }
+
+h2 {
+  font-size: 9.5pt; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase;
+  color: #9a6b00; border-bottom: 1px solid #d8d2c2; padding-bottom: 2px;
+  margin: 11px 0 5px;
+}
+h2:first-of-type { margin-top: 9px; }
+
+.role { display: flex; justify-content: space-between; align-items: baseline; margin-top: 6px; }
+.role:first-child { margin-top: 2px; }
+.role .title { font-weight: 700; font-size: 9.8pt; }
+.role .org { font-weight: 400; color: #3d3a33; }
+.role .dates { font-size: 8.6pt; color: #55524a; white-space: nowrap; padding-left: 10px; }
+
+ul { margin: 2px 0 0 13px; }
+li { margin-bottom: 1.5px; padding-left: 2px; }
+li::marker { color: #9a6b00; }
+
+p.profile { margin-top: 2px; text-align: justify; }
+.oneline { margin-top: 6px; }
+.oneline .title { font-weight: 700; }
+
+.skilltable { margin-top: 2px; border-collapse: collapse; width: 100%; }
+.skilltable td { vertical-align: top; padding: 1px 0; }
+.skilltable td.k { font-weight: 700; width: 105px; padding-right: 8px; white-space: nowrap; }
+
+.inline-list { margin-top: 2px; }
+.avoid-break { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<h1>Pierre Ankouane</h1>
+<div class="tagline">Applied AI Engineer &nbsp;·&nbsp; Founder &amp; CTO, Afryx Labs &nbsp;·&nbsp; LLM agents, multi-tenant SaaS, production systems</div>
+<div class="contact">
+<span>Leeds, United Kingdom</span> · <span><a href="mailto:ankouanepierre@gmail.com">ankouanepierre@gmail.com</a></span> · <span>+44 7549 394048</span> · <span><a href="https://pierreankouane.dev">pierreankouane.dev</a></span> · <span><a href="https://github.com/ByEmG">github.com/ByEmG</a></span> · <span><a href="https://www.linkedin.com/in/pierreemmanuelgerard">linkedin.com/in/pierreemmanuelgerard</a></span>
+</div>
+
+<h2>Profile</h2>
+<p class="profile">Final-year BSc Applied AI student who ships production software with paying customers while studying. I design and run LLM agent systems end to end: LangGraph multi-agent pipelines, Claude API integrations, multi-tenant Postgres backends, and the environment and release discipline needed to keep them live for real users. I lead engineering for a distributed team of fifteen across four countries, and I work in English, French and Spanish.</p>
+
+<h2>Experience</h2>
+
+<div class="avoid-break">
+<div class="role"><span class="title">Founder &amp; Chief Technology Officer <span class="org">· Afryx Labs</span></span><span class="dates">2026 to present · remote, UK / Cameroon / Canada / USA</span></div>
+<ul>
+<li>Lead engineering for a fifteen-person distributed team: architecture, code review, release process and delivery cadence across two products.</li>
+<li>Kampus, a school management platform, is live in production with three fee-paying institutions: designed the full multi-tenant PostgreSQL schema and built the Next.js 16 web app and React Native mobile client on Supabase, with row-level security enforcing tenant isolation.</li>
+<li>Run separate development and production environments with branch-based deployment pipelines, so schema migrations and releases ship without downtime for live schools.</li>
+<li>Built the commercial model behind the product: per-student monthly billing, a setup fee, and a break-even model that pricing decisions were tested against.</li>
+<li>Produced APDP data-protection compliance documentation and a formal tender-standard specification, which unlocked the institutional contracts.</li>
+</ul>
+</div>
+
+<div class="avoid-break">
+<div class="role"><span class="title">Product &amp; Technical Lead, O'pep <span class="org">· Afryx Labs</span></span><span class="dates">2026 to present · in development</span></div>
+<ul>
+<li>Designing an intercity bus booking aggregator for Cameroon: a traveller mobile app and an agency web portal sharing a single seat-inventory model, ahead of a Yaoundé to Douala corridor pilot.</li>
+<li>Own the hardest correctness problem in the product: offline-capable agency counters with resynchronisation, including arbitration of double-sold seats between offline counter sales and online bookings.</li>
+<li>Specified Mobile Money payment flows (MTN MoMo, Orange Money) plus a pay-at-counter reference code for a low card-penetration market, and mapped Cameroon's 2024 data-protection law onto the build.</li>
+<li>Built the full design system and clickable prototype: 43 traveller mobile frames and the agency desktop views.</li>
+</ul>
+</div>
+
+<div class="avoid-break">
+<div class="role"><span class="title">Founder <span class="org">· Arcflow</span></span><span class="dates">2025 to present · United Kingdom</span></div>
+<ul>
+<li>Built and shipped an AI Chief of Staff SaaS for small businesses from concept to production at arcflowhq.com.</li>
+<li>Engineered a LangGraph multi-agent pipeline that reads a customer's work context and produces tracked actions, with Claude as the reasoning layer and human approval on high-stakes steps.</li>
+<li>Implemented a multi-tenant Supabase backend with row-level security, Stripe subscription billing and continuous deployment on Vercel.</li>
+<li>Ran go-to-market solo: a 112-lead scored outreach list and nine cold-email sequences built around a single action-tracking wedge.</li>
+</ul>
+</div>
+
+<div class="oneline"><span class="title">Co-founder &amp; Technical Lead · Miyora AI</span> <span class="dates">&nbsp;2025 · remote, UK &amp; Canada</span><br>
+Co-built a skin intelligence platform, owning the model and application layer.</div>
+
+<div class="oneline"><span class="title">Applied AI Instructor (part-time) · Institut Supérieur Fang de Messamena</span> <span class="dates">&nbsp;2025 to present · Cameroon</span><br>
+Deliver AI and model-training sessions and support curriculum and lab infrastructure for a higher-education institute.</div>
+
+<h2>Selected Projects</h2>
+<ul>
+<li><b>pierre-agent-evals</b> (github.com/ByEmG/pierre-agent-evals): public six-category failure taxonomy for LLM agents; evaluation harness in progress covering a task suite, per-run failure classification, and pass-rate, cost and latency reporting across models and prompt variants.</li>
+<li><b>humanoid-agent</b> (github.com/ByEmG/humanoid-agent): goal-directed LLM agent with planning, memory and tool use.</li>
+<li><b>APEX</b>: sport-specific AI athletic performance app in React Native and Expo, on a 25-table Supabase schema with Claude API agent logic.</li>
+<li><b>LinkedIn content engine</b>: twelve-node LangGraph automation system for research, drafting and scheduling.</li>
+<li><b>ML coursework and independent work</b>: Parkinson's detection pipeline benchmarking Random Forest, SVM and XGBoost; football sentiment NLP across Reddit, Twitter and ESPN; facial emotion recognition CNN.</li>
+</ul>
+
+<h2>Technical Skills</h2>
+<table class="skilltable">
+<tr><td class="k">Languages</td><td>Python, TypeScript, JavaScript, SQL</td></tr>
+<tr><td class="k">AI &amp; ML</td><td>LangGraph multi-agent orchestration, Anthropic Claude API, agent evaluation and failure-taxonomy design, prompt and tool design, scikit-learn, XGBoost, CNNs, NLP and sentiment analysis</td></tr>
+<tr><td class="k">Web &amp; mobile</td><td>Next.js 16, React, React Native, Expo, Tailwind</td></tr>
+<tr><td class="k">Backend &amp; data</td><td>Supabase, PostgreSQL, row-level security, multi-tenant schema design, Stripe billing, REST APIs</td></tr>
+<tr><td class="k">DevOps &amp; delivery</td><td>Git and GitHub, branch-based CI/CD, separate development and production environments, Vercel deployment pipelines, environment and secret management, Playwright browser automation</td></tr>
+<tr><td class="k">Ways of working</td><td>Technical leadership of a distributed team, sprint planning, product and pricing modelling, data-protection compliance documentation (APDP), technical writing in English and French</td></tr>
+</table>
+
+<h2>Education</h2>
+<div class="role"><span class="title">BSc (Hons) Applied Artificial Intelligence <span class="org">· University of Bradford</span></span><span class="dates">graduating May 2027</span></div>
+<div class="inline-list">On track for a 2:1 or First. Coursework across machine learning, deep learning, NLP and applied data science.</div>
+
+<h2>Certifications &amp; Programmes</h2>
+<div class="inline-list">CMI Level 5 in Management · Harvard CS109xa, Python for Data Science and Machine Learning · IBM, Introduction to Generative AI</div>
+
+<h2>Languages</h2>
+<div class="inline-list">French (native) · English (fluent) · Spanish (conversational)</div>
+
+<h2>Interests</h2>
+<div class="inline-list">Piano, reading, strength training, productivity systems, and building technology for African markets. Co-organised Open House, a 72-hour live build event for AI builders in London.</div>
+
+</body>
+</html>
