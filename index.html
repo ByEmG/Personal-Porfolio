@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pierre Emmanuel Gerard · Applied AI</title>
+<title>Pierre Ankouane · Client-Facing Applied AI Engineer</title>
 <link rel="icon" type="image/png" href="fav.png">
 <link rel="apple-touch-icon" href="fav.png">
-<meta name="description" content="Pierre Emmanuel Gerard, client-facing Applied AI engineer. I turn client workflows into software requirements, design solutions and work with engineering teams to deliver them. Seeking UK graduate Solutions Engineer and Implementation Engineer roles from May 2027. Leeds, UK.">
+<meta name="description" content="Pierre Ankouane, client-facing Applied AI engineer. I turn client workflows into software requirements, design solutions and work with engineering teams to deliver them. Seeking UK graduate Solutions Engineer and Implementation Engineer roles from May 2027. Leeds, UK.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 <style>
@@ -118,6 +118,7 @@ pre#globe{
 h1{font-size:clamp(21px,3.4vw,31px);font-weight:600;letter-spacing:-.02em}
 .role{color:var(--dim);margin-top:6px}
 .tag{margin-top:22px;min-height:3.4em}
+.intro{max-width:620px;margin:16px auto 0;color:var(--dim);font-size:14px;line-height:1.6}
 .tag em{font-style:italic;color:var(--dim)}
 .cursor{display:inline-block;width:.55em;background:var(--accent);animation:blink 1s steps(1) infinite;color:transparent}
 @keyframes blink{50%{opacity:0}}
@@ -259,6 +260,7 @@ kbd{
 .cta-row .visit{margin-top:8px}
 button.visit{background:none;font-family:var(--font);cursor:pointer;line-height:inherit}
 #home .cta-row{justify-content:center;margin-top:6px}
+@media (max-width:600px){#home .tag,#home .now{display:none}#home .intro{font-size:13px}}
 #toast{position:fixed;left:50%;bottom:64px;transform:translateX(-50%) translateY(8px);
   background:var(--bg);border:1px solid var(--faint);color:var(--ink);
   padding:8px 14px;font-size:12px;opacity:0;pointer-events:none;
@@ -273,7 +275,7 @@ button.visit{background:none;font-family:var(--font);cursor:pointer;line-height:
   <span class="sep">&gt;</span>
   <button class="crumb-btn" id="am-btn" aria-expanded="false">am</button>
   <span class="sep">&gt;</span>
-  <span id="name-crumb">Pierre Emmanuel Gerard</span>
+  <span id="name-crumb">Pierre Ankouane</span>
   <button id="theme-btn" aria-label="toggle light/dark mode" title="toggle theme">◐</button>
 
   <div id="menu" role="menu">
@@ -286,10 +288,10 @@ button.visit{background:none;font-family:var(--font);cursor:pointer;line-height:
     <div class="group">client delivery</div>
     <button data-go="kampus"><span>Kampus</span><span class="idx">01</span></button>
     <button data-go="meno"><span>MenoClinic</span><span class="idx">02</span></button>
-    <div class="group">product</div>
-    <button data-go="sitedue"><span>SiteDue</span><span class="idx">03</span></button>
-    <div class="group">open work</div>
-    <button data-go="evals"><span>Agent Evals</span><span class="idx">04</span></button>
+    <div class="group">engineering</div>
+    <button data-go="evals"><span>Agent Evals</span><span class="idx">03</span></button>
+    <div class="group">other projects</div>
+    <button data-go="sitedue"><span>SiteDue</span><span class="idx">04</span></button>
   </div>
 </nav>
 
@@ -297,13 +299,14 @@ button.visit{background:none;font-family:var(--font);cursor:pointer;line-height:
   <!-- HOME -->
   <section class="screen active" id="home">
     <pre id="globe" aria-hidden="true"></pre>
-    <h1>Pierre Emmanuel Gerard</h1>
+    <h1>Pierre Ankouane</h1>
     <div class="role">Client-Facing Applied AI Engineer · Leeds, UK</div>
+    <p class="intro">I turn client workflows into software requirements, design solutions, and work with engineering teams to deliver them. I'm a final-year Applied AI student at the University of Bradford, seeking UK graduate Solutions Engineer, Implementation Engineer and Technology Consultant roles from May 2027.</p>
     <p class="tag"><span id="typed"></span><span class="cursor">█</span></p>
     <div class="now">now: leading client delivery on Kampus and MenoClinic</div>
     <div class="cta-row">
-      <button class="visit" data-go="kampus">view projects →</button>
-      <a class="visit" href="cv.pdf" download="Pierre_Ankouane_CV.pdf">download cv ↓</a>
+      <button class="visit" data-go="kampus">view my projects →</button>
+      <a class="visit" href="cv.pdf" download="Pierre_Ankouane_CV.pdf">download my cv ↓</a>
     </div>
     <button class="see-more" data-go="about">how I work →</button>
 
@@ -321,13 +324,14 @@ button.visit{background:none;font-family:var(--font);cursor:pointer;line-height:
   <section class="screen proj" id="about">
     <div class="idx">PROFILE</div>
     <h1>Pierre</h1>
-    <div class="meta">Applied AI · client delivery and solution architecture · Leeds, UK</div>
-    <p>I work where clients and engineering meet. I run the conversations that turn a client's problem into clear requirements, design the architecture, and keep the build team and the client aligned through short, regular delivery cycles.</p>
-    <p>Right now that means two active engagements. On Kampus, I lead requirements and delivery for Fang Institute's school management and online learning platform, working with a joint team of 15 across Afryx Labs and Kaeyros Analytics. On MenoClinic, I'm technical lead and the client's point of contact for an AI-assisted patient screening tool for a UK private clinic.</p>
-    <p class="avail">I graduate in May 2027 (BSc Applied AI, on track for a First) and I'm looking for graduate Solutions Engineer, Implementation Engineer, Technology Consultant and Forward Deployed roles in the UK. Fastest way to reach me: <a href="mailto:ankouanepierre@gmail.com" class="copy-email">ankouanepierre@gmail.com</a>.</p>
+    <div class="meta">Applied AI · client delivery · Leeds, UK</div>
+    <p>I'm completing a BSc (Hons) in Applied Artificial Intelligence at the University of Bradford, with predicted First Class Honours. At Afryx, I work directly with clients to clarify what they need, turn that into requirements engineers can build from, and use demos to decide what changes next. My technical work spans Python, TypeScript, PostgreSQL and LLM evaluation.</p>
+    <p class="avail">I'm based in Leeds, open to London and relocation, and available for UK graduate roles from May 2027. I work in English and French and speak conversational Spanish.</p>
     <div class="cta-row">
-      <a class="visit" href="cv.pdf" download="Pierre_Ankouane_CV.pdf">download cv ↓</a>
-      <a class="visit copy-email" href="mailto:ankouanepierre@gmail.com">copy email ⧉</a>
+      <a class="visit copy-email" href="mailto:ankouanepierre@gmail.com">email me ⧉</a>
+      <a class="visit" href="https://www.linkedin.com/in/pierreemmanuelgerard" target="_blank" rel="noopener">linkedin ↗</a>
+      <a class="visit" href="https://github.com/ByEmG" target="_blank" rel="noopener">github ↗</a>
+      <a class="visit" href="cv.pdf" download="Pierre_Ankouane_CV.pdf">download my cv ↓</a>
     </div>
 
     <div class="term-label">skills</div>
@@ -343,6 +347,7 @@ button.visit{background:none;font-family:var(--font);cursor:pointer;line-height:
       <li><span class="yr">2026</span><span><span class="what">Founder &amp; Technical Lead</span> <span class="who">· Afryx Labs</span></span></li>
       <li><span class="yr">2026</span><span><span class="what">Technical Lead, MenoClinic</span> <span class="who">· University of Bradford industry project</span></span></li>
       <li><span class="yr">2026</span><span><span class="what">Technical &amp; Product Lead, SiteDue</span> <span class="who">· University of Bradford venture project</span></span></li>
+      <li><span class="yr">2025</span><span><span class="what">Assistant Technology Engineer (contract)</span> <span class="who">· Institut Supérieur Fang de Messamena</span></span></li>
     </ul>
 
     <div class="term-label">education</div>
@@ -350,7 +355,6 @@ button.visit{background:none;font-family:var(--font);cursor:pointer;line-height:
       <li><span class="yr">2027</span><span><span class="what">BSc Applied Artificial Intelligence</span> <span class="who">· University of Bradford · on track for a First</span></span></li>
       <li><span class="yr">·</span><span><span class="what">CMI Level 5 in Management</span></span></li>
       <li><span class="yr">·</span><span><span class="what">HarvardX CS109xa: Python for Data Science and ML</span></span></li>
-      <li><span class="yr">·</span><span><span class="what">IBM Introduction to Generative AI</span></span></li>
     </ul>
 
     <div class="term-label">languages</div>
@@ -431,10 +435,9 @@ button.visit{background:none;font-family:var(--font);cursor:pointer;line-height:
     <div class="idx">01 / CLIENT DELIVERY</div>
     <pre class="mini" data-anim="kampus" aria-hidden="true"></pre>
     <h1>Kampus</h1>
-    <div class="meta">2026 to present · Afryx Labs × Kaeyros Analytics · in active build with its first client</div>
-    <p>One mobile-first platform combining school management and online learning, built for Fang Institute in Cameroon. Target go-live: mid-February 2027.</p>
-    <p>My role: I lead requirements with the client and translate them into specifications for a joint team of 15 from Afryx Labs and Kaeyros Analytics, directing delivery alongside the Kaeyros technical lead.</p>
-    <p>We run a weekly loop with the client: demo what's built, capture changes and missing pieces, reprioritise, then present the next iteration. Sixteen client meetings so far, and counting.</p>
+    <div class="meta">Requirements and delivery lead · Afryx Labs × Kaeyros Analytics · in development</div>
+    <p>Kampus is a mobile-first platform that brings school administration and online learning together for Fang Institute. I lead requirements and delivery, turning workflows such as academic scheduling, exams and online course delivery into specifications for a joint 15-person team. I use weekly client demos and feedback to agree what the team should build next.</p>
+    <p>The Fang Institute rollout is targeting mid-February 2027.</p>
     <div class="stack">Next.js · Supabase · React Native (Expo)</div>
     <a class="visit" href="https://www.kampusafryx.com" target="_blank" rel="noopener">visit kampusafryx.com ↗</a>
     <div class="proj-nav">
@@ -448,20 +451,34 @@ button.visit{background:none;font-family:var(--font);cursor:pointer;line-height:
     <div class="idx">02 / CLIENT DELIVERY</div>
     <pre class="mini" data-anim="meno" aria-hidden="true"></pre>
     <h1>MenoClinic</h1>
-    <div class="meta">Oct 2026 to present · University of Bradford industry project · team of 3</div>
-    <p>An AI-assisted screening tool for a UK private menopause clinic. Today the founder, who is also the clinician, reviews every pre-consultation questionnaire by hand. The tool organises each one into a structured summary, flags red flags and missing information, and suggests a review category for her to check.</p>
-    <p>My role: technical lead and the clinic's single point of contact. I run the requirements sessions with the founder and designed the architecture: deterministic, clinician-approved rules handle red flags, an AI drafts a summary linked back to the original answers, and the clinician signs off every case.</p>
-    <p>Targets were agreed before any build: 100% red-flag sensitivity, 85 to 95% triage accuracy and at least half the screening time saved, all measured on clinician-approved synthetic cases. The clinic's live booking system stays untouched.</p>
+    <div class="meta">Technical lead and client point of contact · University of Bradford industry project</div>
+    <p>I'm the main point of contact for a UK private clinic and the technical lead for a three-person team. I designed a screening workflow where clinician-approved rules flag concerns, AI drafts a summary linked to the patient's original answers, and a clinician signs off on every case.</p>
+    <p>We scoped the first phase separately from the clinic's live booking system and agreed how to evaluate it using clinician-approved synthetic cases.</p>
     <div class="stack">Python · FastAPI · React · Claude API</div>
     <div class="proj-nav">
       <button data-go="kampus">&lt; kampus</button>
-      <button data-go="sitedue">sitedue &gt;</button>
+      <button data-go="evals">agent evals &gt;</button>
     </div>
   </section>
 
+  <!-- AGENT EVALS -->
+  <section class="screen proj" id="evals">
+    <div class="idx">03 / ENGINEERING</div>
+    <pre class="mini" data-anim="evals" aria-hidden="true"></pre>
+    <h1>Agent Evals</h1>
+    <div class="meta">Testing how reliably AI agents complete tasks · open-source Python project</div>
+    <p>I built a test harness that runs an AI agent through a set of tasks and tracks pass rate, cost and latency.</p>
+    <p>In an initial eight-case experiment, reducing the number of steps the agent could take from 10 to 3 cut the number of passing cases from 8 to 5. All three failures came from the agent stopping before it finished the task.</p>
+    <div class="stack">Python · Anthropic API · pytest</div>
+    <a class="visit" href="https://github.com/ByEmG/pierre-agent-evals" target="_blank" rel="noopener">view the github repository ↗</a>
+    <div class="proj-nav">
+      <button data-go="meno">&lt; menoclinic</button>
+      <button data-go="sitedue">sitedue &gt;</button>
+    </div>
+  </section>
   <!-- SITEDUE -->
   <section class="screen proj" id="sitedue">
-    <div class="idx">03 / PRODUCT</div>
+    <div class="idx">04 / OTHER PROJECTS</div>
     <pre class="mini" data-anim="sitedue" aria-hidden="true"></pre>
     <h1>SiteDue</h1>
     <div class="meta">Oct 2026 to present · University of Bradford venture project · team of 5</div>
@@ -469,26 +486,11 @@ button.visit{background:none;font-family:var(--font);cursor:pointer;line-height:
     <p>My role: technical and product lead. I coordinate the backend, frontend, voice and customer-research workstreams, and shape the product from interviews with the people who would use it.</p>
     <div class="stack">React (Vite) · Supabase</div>
     <div class="proj-nav">
-      <button data-go="meno">&lt; menoclinic</button>
-      <button data-go="evals">agent evals &gt;</button>
-    </div>
-  </section>
-
-  <!-- AGENT EVALS -->
-  <section class="screen proj" id="evals">
-    <div class="idx">04 / OPEN WORK</div>
-    <pre class="mini" data-anim="evals" aria-hidden="true"></pre>
-    <h1>Agent Evals</h1>
-    <div class="meta">open source · evaluation harness for LLM agents · Jan to Mar 2025</div>
-    <p>Agents don't fail like models do. Single-shot accuracy hides the interesting failures: wrong plans, misused tools, ungrounded claims, drifted instructions, unrecovered errors, broken outputs. This harness is built around a six-category failure taxonomy for exactly those patterns.</p>
-    <p>It runs an agent through a task suite, scores each run with programmatic checks plus an LLM judge, and reports pass rate, cost and latency. In an initial eight-case experiment, cutting the agent's step budget from 10 to 3 dropped the pass rate from 8/8 to 5/8, and every failure traced back to premature termination.</p>
-    <div class="stack">Python · Anthropic API · pytest</div>
-    <a class="visit" href="https://github.com/ByEmG/pierre-agent-evals" target="_blank" rel="noopener">view on github ↗</a>
-    <div class="proj-nav">
-      <button data-go="sitedue">&lt; sitedue</button>
+      <button data-go="evals">&lt; agent evals</button>
       <button data-go="home">home &gt;</button>
     </div>
   </section>
+
 </main>
 
 <footer>
@@ -714,7 +716,7 @@ function go(id){
   menuBtns.forEach(b=>b.setAttribute('aria-current', b.dataset.go===id));
   menu.classList.remove('open'); amBtn.setAttribute('aria-expanded','false');
   document.getElementById('name-crumb').textContent =
-    id==='home' ? 'Pierre Emmanuel Gerard' : document.querySelector('#'+id+' h1').textContent;
+    id==='home' ? 'Pierre Ankouane' : document.querySelector('#'+id+' h1').textContent;
 }
 document.addEventListener('click',e=>{
   const t=e.target.closest('[data-go]');
@@ -742,8 +744,8 @@ const cmds=[
   {label:'go: Afryx Labs',k:'the company',id:'afryx'},
   {label:'go: Kampus',k:'01 · client delivery',id:'kampus'},
   {label:'go: MenoClinic',k:'02 · client delivery',id:'meno'},
-  {label:'go: SiteDue',k:'03 · product',id:'sitedue'},
-  {label:'go: Agent Evals',k:'04 · open work',id:'evals'},
+  {label:'go: Agent Evals',k:'03 · engineering',id:'evals'},
+  {label:'go: SiteDue',k:'04 · other projects',id:'sitedue'},
   {label:'open: afryxlabs.com',k:'↗',url:'https://www.afryxlabs.com'},
   {label:'open: kampusafryx.com',k:'↗',url:'https://www.kampusafryx.com'},
   {label:'open: GitHub',k:'↗',url:'https://github.com/ByEmG'},
