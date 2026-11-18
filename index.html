@@ -6,7 +6,7 @@
 <title>Pierre Emmanuel Gerard · Applied AI</title>
 <link rel="icon" type="image/png" href="fav.png">
 <link rel="apple-touch-icon" href="fav.png">
-<meta name="description" content="Pierre Emmanuel Gerard, Applied AI graduate and founder of Afryx Labs. I lead client requirements, solution architecture and delivery on Kampus and MenoClinic. Leeds, UK.">
+<meta name="description" content="Pierre Emmanuel Gerard, client-facing Applied AI engineer. I turn client workflows into software requirements, design solutions and work with engineering teams to deliver them. Seeking UK graduate Solutions Engineer and Implementation Engineer roles from May 2027. Leeds, UK.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 <style>
@@ -257,6 +257,8 @@ kbd{
 }
 .cta-row{display:flex;gap:10px 26px;flex-wrap:wrap}
 .cta-row .visit{margin-top:8px}
+button.visit{background:none;font-family:var(--font);cursor:pointer;line-height:inherit}
+#home .cta-row{justify-content:center;margin-top:6px}
 #toast{position:fixed;left:50%;bottom:64px;transform:translateX(-50%) translateY(8px);
   background:var(--bg);border:1px solid var(--faint);color:var(--ink);
   padding:8px 14px;font-size:12px;opacity:0;pointer-events:none;
@@ -296,9 +298,13 @@ kbd{
   <section class="screen active" id="home">
     <pre id="globe" aria-hidden="true"></pre>
     <h1>Pierre Emmanuel Gerard</h1>
-    <div class="role">Applied AI · Founder, Afryx Labs · Leeds, UK</div>
+    <div class="role">Client-Facing Applied AI Engineer · Leeds, UK</div>
     <p class="tag"><span id="typed"></span><span class="cursor">█</span></p>
     <div class="now">now: leading client delivery on Kampus and MenoClinic</div>
+    <div class="cta-row">
+      <button class="visit" data-go="kampus">view projects →</button>
+      <a class="visit" href="cv.pdf" download="Pierre_Ankouane_CV.pdf">download cv ↓</a>
+    </div>
     <button class="see-more" data-go="about">how I work →</button>
 
     <div class="nl">
@@ -473,9 +479,9 @@ kbd{
     <div class="idx">04 / OPEN WORK</div>
     <pre class="mini" data-anim="evals" aria-hidden="true"></pre>
     <h1>Agent Evals</h1>
-    <div class="meta">open source · evaluation harness for LLM agents · in progress</div>
+    <div class="meta">open source · evaluation harness for LLM agents · Jan to Mar 2025</div>
     <p>Agents don't fail like models do. Single-shot accuracy hides the interesting failures: wrong plans, misused tools, ungrounded claims, drifted instructions, unrecovered errors, broken outputs. This harness is built around a six-category failure taxonomy for exactly those patterns.</p>
-    <p>It runs an agent through a task suite, scores each run with programmatic checks plus an LLM judge, and reports pass rate, cost and latency. First finding: cutting the agent's step budget from 10 to 3 dropped the pass rate from 8/8 to 5/8, and every failure traced back to premature termination.</p>
+    <p>It runs an agent through a task suite, scores each run with programmatic checks plus an LLM judge, and reports pass rate, cost and latency. In an initial eight-case experiment, cutting the agent's step budget from 10 to 3 dropped the pass rate from 8/8 to 5/8, and every failure traced back to premature termination.</p>
     <div class="stack">Python · Anthropic API · pytest</div>
     <a class="visit" href="https://github.com/ByEmG/pierre-agent-evals" target="_blank" rel="noopener">view on github ↗</a>
     <div class="proj-nav">
